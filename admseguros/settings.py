@@ -54,7 +54,7 @@ ROOT_URLCONF = 'admseguros.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/eduardo/Documents/web/django/admseguros/seguros/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
