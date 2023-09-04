@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
   <base href="/sis_seguros_aj">
   -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/sis_seguros_aj/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -23,7 +24,9 @@
     <script src="https://kit.fontawesome.com/b56caa63bd.js" crossorigin="anonumous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="/sis_seguros_aj/css/styles.css" />
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -33,7 +36,8 @@
     <nav class="navbar navbar-expand-lg bg-primary fixed-top ">
         <div class="container-fluid">
             <a class="navbar-brand" href="">
-                <img src="/sis_seguros_aj/assets/logo.png" id="logo" alt="logo" width="40%" />
+               
+                <img src="{% static 'assets/logo.png' %}" id="logo" alt="logo" width="40%" />
             </a>
             
                 <ul class="list-group list-group-horizontal" id="menu">
