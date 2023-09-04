@@ -21,4 +21,8 @@ DJANGO - PYTHON
     pip install mysqlclient
 11) corremos el servidor
     python manage.py runserver 
-12) 
+12) Una vez generado el modelo de datos
+    python manage.py migrate    
+    python manage.py createsuperuser
+    python manage.py makemigrations
+    python manage.py migrate
