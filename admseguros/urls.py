@@ -20,6 +20,5 @@ from seguros import views
 
 urlpatterns = [    
     path('admin/', admin.site.urls),
-    path('', incluce 'seguros.urls'),
-    
+    path('', include('seguros.urls')),    
 ]

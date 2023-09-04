@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'admseguros.wsgi.application'
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'seguros.bd',
+        'NAME': 'segurosbd',
         'USER': 'root',
         'PASSWORD': '1308',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
