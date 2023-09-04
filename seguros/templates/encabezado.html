@@ -35,11 +35,10 @@
 <div class="container-fluid" id="Encabezado">
     <nav class="navbar navbar-expand-lg bg-primary fixed-top ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="">
-               
+            <a class="navbar-brand" href="">               
                 <img src="{% static 'assets/logo.png' %}" id="logo" alt="logo" width="40%" />
             </a>
-            
+            {% if user.is_auhtenticated %}            
                 <ul class="list-group list-group-horizontal" id="menu">
                     <li class="list-group-item border-0">
                         <div class="dropdown">
@@ -89,9 +88,9 @@
                         </div>
                     </li>
                 </ul>
-                
+                {% endif %}
             <ul class="list-group list-group-horizontal" id="menu">
-                
+                {% if user.is_auhtenticated %}
                     <div class="btn-group dropleft">
                         <li class="list-group-item border-0 dropleft">
                             
@@ -121,22 +120,23 @@
                             </ul>
                     </div>
                     </li>
-                    
-                <li class="list-group-item border-0">
-                    <!-- Button trigger modal LOGIN-->
-                    
-                        <a href="/sis_seguros_aj/views/login/login.php">
-                            <i class="fa-solid fa-user-lock fa-2xl">
-                            </i>
-                        </a>
-                          <!-- Button LOGOUT 
-                        <a href="/sis_seguros_aj/views/logout.php">
-                            <i class="fa-solid fa-right-from-bracket fa-2xl">
-                            </i>
-                        </a>
-                        -->
+                {% else %}    
+                    <li class="list-group-item border-0">
+                        <!-- Button trigger modal LOGIN-->
                         
-                </li>
+                            <a href="/sis_seguros_aj/views/login/login.php">
+                                <i class="fa-solid fa-user-lock fa-2xl">
+                                </i>
+                            </a>
+                            <!-- Button LOGOUT 
+                            <a href="/sis_seguros_aj/views/logout.php">
+                                <i class="fa-solid fa-right-from-bracket fa-2xl">
+                                </i>
+                            </a>
+                            -->
+                            
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
