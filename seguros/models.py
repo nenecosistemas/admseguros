@@ -9,3 +9,7 @@ class compania(models.Model):
   domicilio_compania=models.CharField(max_length=255) 
   telefono_compania=models.CharField(max_length=45) 
   correo_compania=models.Charfield(max_length=45)
+
+  def __str__(self):
+    texto = "{0} ({1})"
+    return texto.format(self.nombre_compania, self.cuit_compania)
