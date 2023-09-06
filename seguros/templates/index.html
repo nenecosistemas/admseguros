@@ -1,8 +1,4 @@
-
-{% include "encabezado.html" %}
-<body>
-  {% include "principal.html" %}  
-</body>
-{% include "pie.html" %}
-
-  
+{% extends "base.html" %}
+  {% block content %}
+    {% include "principal.html" %}  
+  {% endblock %}

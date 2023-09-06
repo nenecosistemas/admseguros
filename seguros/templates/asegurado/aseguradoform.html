@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid text-center" id="Central">  
+
+  <div class="card text-center">
+    <div class="card-header">
+      ABM Asegurado
+    </div>
+    <div class="card-body  text-center">
+      
+      <form action="" method="POST">     
+        {% csrf_token %}
+        <table class="table" >
+        {{form.as_table}}
+      </table>
+        <input type="submit">
+      
+    </form>  
+    </div>
+    
+  </div>
+  
+</div>
+{% endblock %}

@@ -25,13 +25,13 @@ class Compania(models.Model):
         ordering = ['nombre_compania']
 
 class Asegurado(models.Model):
-  dni_asegurado=models.CharField(primary_key=True, max_length=15)
-  apellido_y_nombre_asegurado=models.CharField(max_length=255)
-  domicilio_asegurado=models.CharField(max_length=255, blank=True)
-  telefono_asegurado=models.CharField(max_length=45, blank=True)
-  correo_asegurado=models.CharField(max_length=45, blank=True)
-  tipoiva_asegurado=models.ForeignKey(Iva,on_delete=models.PROTECT)
-  cuit_asegurado=models.CharField(max_length=45, blank=True)
+  dni_asegurado=models.CharField(verbose_name="D.N.I:", primary_key=True, max_length=15)
+  apellido_y_nombre_asegurado=models.CharField(verbose_name="Apellido y Nombre:",max_length=255)
+  domicilio_asegurado=models.CharField(verbose_name="Domicilio:",max_length=255, blank=True)
+  telefono_asegurado=models.CharField(verbose_name="Teléfono:",max_length=45, blank=True)
+  correo_asegurado=models.CharField(verbose_name="Correo Electrónico:",max_length=45, blank=True)
+  tipoiva_asegurado=models.ForeignKey(Iva,on_delete=models.PROTECT,verbose_name="Tipo IVA:")
+  cuit_asegurado=models.CharField(verbose_name="C.U.I.T.:",max_length=45, blank=True)
   def __str__(self):
     texto = "{0} ({1})"
     return texto.format(self.apellido_y_nombre_asegurado, self.dni_asegurado)
